@@ -1,12 +1,70 @@
-# React + Vite
+# 🔐 KeySync – Lightweight, Secure Password Management Without Sign-Up
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeySync is an open-source password manager that lets users **securely store and retrieve passwords without needing to create an account**. Built for speed, privacy, and ease of use, KeySync eliminates unnecessary friction while ensuring encrypted password storage.
 
-Currently, two official plugins are available:
+> 🚫 No accounts. 🔐 Strong security. ⚡ Fast access.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Secure Password Storage** – Save your passwords with strong encryption.
+- 🆓 **No Account Creation Required** – Skip registration and logins entirely.
+- 🧠 **Simple and Fast UI** – Clean and intuitive interface for quick password management.
+
+---
+
+## 🧰 Technology Stack
+
+| Layer      | Technology         |
+|------------|--------------------|
+| Frontend   | [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) |
+| Backend    | [Node.js](https://nodejs.org/) (Express.js) |
+| Database   | [MongoDB](https://www.mongodb.com/) |
+
+---
+
+## ✅ Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [MongoDB](https://www.mongodb.com/) (local or cloud, e.g. MongoDB Atlas)
+- [Git](https://git-scm.com/)
+
+---
+
+## 📦 Installation Steps
+
+1. **Clone the Repository**
+
+git clone https://github.com/Abou-bakar/keysync-mongo.git
+cd keysync
+
+2. **Install Frontend Dependencies**
+
+npm install
+
+3. **Install Backend Dependencies**
+
+cd ../server
+npm install
+⚙️ Configuration
+In the server folder, create a .env file with the following content:
+
+PORT=3000
+MONGODB_URI=your-mongodb-uri
+ENCRYPTION_SECRET=your-secret-key
+The ENCRYPTION_SECRET will be used to encrypt/decrypt sensitive data. Keep it safe.
+
+🏃 Running the Application
+Backend (API Server):
+
+cd backend
+node --watch server.js
+
+Frontend (React App):
+npm run dev
+
+Visit the frontend at http://localhost:5173
+Backend runs on http://localhost:3000
